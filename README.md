@@ -48,7 +48,7 @@ sudo chmod a+rw /dev/tty...
 
 ## Launching the interface
 
-Finally, the driver can be used by launching the ``` position_streaming_interface.launch``` file that launches the driver node which initializes a communication between ROS and the robot:
+Finally, the driver can be used by launching the ``` position_streaming_interface.launch``` file that launches the driver node which initializes the communication between ROS and the robot:
 ```
 roslaunch vr_driver position_streaming_interface.launch
 ```
