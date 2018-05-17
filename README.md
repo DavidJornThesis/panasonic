@@ -19,7 +19,7 @@ source devel/setup.bash
 After this, clone this repository into your workspace by using the HTTP or SSH of the repo:
 ```
 cd catkin_ws/src
-git clone -b https://github.com/DavidJornThesis/panasonic/
+git clone https://github.com/DavidJornThesis/panasonic/
 ```
 
 The next thing is to make sure that the Pyprofibus stack is properly installed. To install this, please check the [author's website](https://bues.ch/cms/automation/profibus.html), his [GitHub page](https://github.com/mbuesch/pyprofibus/) or the [Python (pypy) webpage](https://pypi.org/project/pyprofibus/#description). 
