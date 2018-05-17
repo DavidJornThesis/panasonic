@@ -11,9 +11,6 @@ The first thing you need to do is to create a local ROS environment and clone th
 
 ```
 mkdir -p ~/catkin_ws/src
-cd catkin_ws
-catkin_make
-source devel/setup.bash
 ```
 
 After this, clone this repository into your workspace by using the HTTP or SSH of the repo:
