@@ -1,5 +1,5 @@
 # panasonic
-ROS-driver for a Panasonic robot over the Profibus network
+Experimental package of ROS-driver for a Panasonic robot over the Profibus network
 
 ## Introduction
 
