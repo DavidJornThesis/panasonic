@@ -36,11 +36,59 @@ The last thing you need to do is to adjust a few paths in some files. First, go 
 
 ## Usage
 
-A first thing is to is to make sure that a serial to RS485 adapter is used as a proxy between the serial port of the PC and the Profibus connector of the robot.
+A first thing is to is to make sure that a serial to RS485 adapter is used as a proxy between the serial port of the PC and the Profibus connector of the robot. After the installation of the Profibus stack and the setup of the repository, the next thing is to make sure that the used serial port is allowed to read and write data. Then the driver can be used to let the robot move. The user can specifiy a desired Cartesian Pose (position and orientation) by specifying this in the interface that shows up in the terminal. A quick walkthrough is given below:
 
+```
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+dmesg
+sudo chmod a+rw /dev/tty...
+```
 
+## Launching the interface
 
-## Launching the driver
+Finally, the driver can be used by launching the ``` position_streaming_interface.launch``` file that launches the driver node which initializes a communication between ROS and the robot:
+```
+roslaunch vr_driver position_streaming_interface.launch
+```
+
+## Expected output
+
+The expected output of the interface in the terminal should be something like this:
+
+```
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.21
+
+NODES
+  /
+    interface (vr_driver/interface.py)
+
+auto-starting new master
+process[master]: started with pid [20780]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to d06cb56a-59c3-11e8-a736-f81654125b1a
+process[rosout-1]: started with pid [20793]
+started core service [/rosout]
+process[interface-2]: started with pid [20796]
+[INFO] [WallTime: 1526555819.348752] Initializing position streaming interface 
+[INFO] [WallTime: 1526555819.349098] Setting up communication with Panasonic robot controller 
+[INFO] [WallTime: 1526555819.379378] Getting user information from terminal 
+Give an integer value for the x-position in mm (between 200 and 1400):900
+Give an integer value for the y-position in mm (between -800 and 800):-200
+Give an integer value for the z-position in mm (between 0 and 1100):600
+Give an integer value for the x-orientation in degrees (between -90 and 90):30
+Give an integer value for the y-orientation in degrees (between -90 and 90):45
+Give an integer value for the z-orientation in degrees (between -90 and 90):45
+Now give a movetype: Point-to-point (1), Continuous-Linear (2), Continuous-Circular (3) --> 1
+[INFO] [WallTime: 1526555829.892654] Sending position and orientation to robot
+```
 
 
 ## Acknowledgments
