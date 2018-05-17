@@ -36,7 +36,7 @@ The last thing you need to do is to adjust a few paths in some files. First, go 
 
 ## Usage
 
-A first thing is to is to make sure that a serial to RS485 adapter is used as a proxy between the serial port of the PC and the Profibus connector of the robot. After the installation of the Profibus stack and the setup of the repository, the next thing is to make sure that the used serial port is allowed to read and write data. Then the driver can be used to let the robot move. The user can specifiy a desired Cartesian Pose (position and orientation) by specifying this in the interface that shows up in the terminal. A quick walkthrough is given below:
+A first thing is to make sure that a serial to RS485 adapter is used as a proxy between the serial port of the PC and the Profibus connector of the robot. After the installation of the Profibus stack and the setup of the repository, the next thing is to make sure that the used serial port is allowed to read and write data. Then the driver can be used to let the robot move. The user can specifiy a desired Cartesian Pose (position and orientation) by specifying this in the interface that shows up in the terminal. A quick walkthrough is given below:
 
 ```
 cd ~/catkin_ws
